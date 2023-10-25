@@ -28,7 +28,7 @@ export default function RegistrationComp() {
         //to save form data except image 
         try{
                 //Post the formdata to db using fetch api
-                const response= await fetch("http://127.0.0.1:8000/api/register",{
+                const response= await fetch("http://13.235.227.152/api/register",{
                     method:"post",
                     headers:{
                         'Content-Type':'application/json',
@@ -53,7 +53,7 @@ export default function RegistrationComp() {
                     const imgData = new FormData();
                     imgData.append('image', imgFile);
                     //post image to upload image api
-                    const imgResponse= await fetch("http://127.0.0.1:8000/api/uploadImage?userid="+formData.userid,{
+                    const imgResponse= await fetch("http://13.235.227.152/api/uploadImage?userid="+formData.userid,{
                                             method:"post",
                                             body:imgData,
                                         });

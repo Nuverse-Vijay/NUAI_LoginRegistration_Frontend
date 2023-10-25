@@ -27,7 +27,7 @@ export default function LoginComp() {
         e.preventDefault();
         console.log(credentials);
         try{
-            const response= await fetch("http://127.0.0.1:8000/api/login",{
+            const response= await fetch("http://13.235.227.152/api/login",{
                         method:"post",
                         headers:{
                             'Content-Type':'application/json',

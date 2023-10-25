@@ -21,7 +21,7 @@ export default function TaskFormComp(props){
         if(props.type==="Add"){
             //Logic to add task to db
             try{
-                const response= await fetch("http://127.0.0.1:8000/api/addTask",{
+                const response= await fetch("http://13.235.227.152/api/addTask",{
                         method:"post",
                         headers:{
                             'Content-Type':'application/json',
@@ -46,7 +46,7 @@ export default function TaskFormComp(props){
             //Logic to edit task using taskId
             console.log("editing task....");
             try{
-                const response= await fetch("http://127.0.0.1:8000/api/editTask",{
+                const response= await fetch("http://13.235.227.152/api/editTask",{
                         method:"post",
                         headers:{
                             'Content-Type':'application/json',

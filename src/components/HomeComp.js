@@ -9,7 +9,7 @@ export default function HomeComp(){
 
     useEffect(()=>{
 
-        fetch("http://127.0.0.1:8000/api/getImage?userid="+ user.loggedInUser.userid)
+        fetch("http://13.235.227.152/api/getImage?userid="+ user.loggedInUser.userid)
         .then(resp=>resp.json())
         .then(url=>{console.log(url);
                     setImgSrc(url);

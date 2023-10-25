@@ -26,7 +26,7 @@ export default function MyTasks() {
     const [isdeleting,setIsDeleting]=useState(false);
 
     useEffect(() => {
-        fetch("http://127.0.0.1:8000/api/tasks?id=" + user.loggedInUser.userid)
+        fetch("http://13.235.227.152/api/tasks?id=" + user.loggedInUser.userid)
             .then(resp => resp.json())
             .then(response => {
                 setTasks(response);
@@ -35,7 +35,7 @@ export default function MyTasks() {
     }, [formDisplay,isdeleting]);
 
     const deleteTask = async (id) =>{
-        await fetch("http://127.0.0.1:8000/api/deleteTask?id=" + id)
+        await fetch("http://13.235.227.152/api/deleteTask?id=" + id)
             .then(resp => resp.json())
             .then(response => {
                 setIsDeleting(true);
