@@ -52,8 +52,10 @@ export default function RegistrationComp() {
                     //upload image separately after inserting registration data
                     const imgData = new FormData();
                     imgData.append('image', imgFile);
+                    imgData.append('userid', formData.userid);
                     //post image to upload image api
-                    const imgResponse= await fetch("http://13.235.227.152/api/uploadImage?userid="+formData.userid,{
+                        //const imgResponse= await fetch("http://13.235.227.152/api/uploadImage?userid="+formData.userid,{
+                        const imgResponse= await fetch("http://13.235.227.152/api/uploadImage",{
                                             method:"post",
                                             body:imgData,
                                         });
